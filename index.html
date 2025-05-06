@@ -52,6 +52,9 @@
       animation: fadeInText 3s ease-in-out;
       display: none;
       opacity: 0;
+      max-height: 70vh; /* Limit the height to make it scrollable */
+      overflow-y: auto; /* Enable vertical scroll */
+      padding-bottom: 20px; /* Add space for the scrollbar */
     }
 
     .emojis {
@@ -187,8 +190,7 @@
     <div class="wish" id="wishText">
       You’re officially an adult now, but for me, you’ll always be that fun, silly, and super special person who lights up every moment. Thank you for being the one who makes life feel better just by being in it. Your smile changes my entire mood, and your presence brings peace like nothing else ever could.<br><br>
       You’re truly my favorite person, my happy place, my chaos and calm all in one.<br><br>
-      Yeah, we fight a lot — like a lot — but no matter what, I’m never letting you go. You’ve made everyone else fade in comparison, and I feel insanely lucky to have you. You’re not just my best friend — you’re a part of me. I love you more than I can explain, and I hope your day is as amazing as you are. Always stay the beautiful soul you are. ❤️
-    </div>
+      
 
     <div class="emojis">
       🥳  🎈 🎁 💝 🌸 💫
@@ -210,7 +212,7 @@
 
     function changeBackground() {
       document.body.style.backgroundImage = "url('https://cdn.dribbble.com/userupload/23391440/file/original-a414a39d0c51dbfec5ee12c37135505a.gif')";
-      
+
       // Show the birthday message with a fade-in effect
       document.getElementById("wishText").style.display = "block";
       setTimeout(() => {
