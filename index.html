@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎂 Happy Birthday Aish 🎉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Importing Fredoka One font -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Fredoka One', sans-serif; /* Applying bubble font */
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      overflow: hidden;
+      background: url('https://cdn.dribbble.com/userupload/22497046/file/original-53c23127543ce85d54b60fd9c8417505.gif') no-repeat center center fixed;
+      background-size: cover;
+      transition: background 1s ease-in-out;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 30px;
+      text-shadow: 2px 2px #000;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .wish {
+      font-size: 1.2em;
+      margin: 30px auto;
+      max-width: 90%;
+      text-shadow: 1px 1px #000;
+      line-height: 1.8;
+      animation: fadeInText 3s ease-in-out;
+      display: none;
+      opacity: 0;
+    }
+
+    .emojis {
+      font-size: 2.5em;
+      margin-top: 30px;
+      animation: fadeInText 4s ease-in-out;
+    }
+
+    .balloon {
+      position: absolute;
+      width: 60px;
+      height: 80px;
+      background-color: #ff6699;
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh); }
+      100% { transform: translateY(-100vh); }
+    }
+
+    .balloon:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .balloon:nth-child(2) { left: 25%; animation-delay: 1s; background-color: #66ccff; }
+    .balloon:nth-child(3) { left: 40%; animation-delay: 2s; background-color: #99ff99; }
+    .balloon:nth-child(4) { left: 55%; animation-delay: 3s; background-color: #ffcc66; }
+    .balloon:nth-child(5) { left: 70%; animation-delay: 4s; background-color: #cc99ff; }
+
+    .confetti {
+      position: absolute;
+      width: 5px;
+      height: 10px;
+      background: #ff0;
+      animation: fall 3s infinite linear;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    .confetti:nth-child(even) { background: #f0f; }
+    .confetti:nth-child(odd) { background: #0ff; }
+
+    .btn-wish {
+      background: #FF1493;
+      color: white;
+      font-size: 1.5em;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+      animation: pulseButton 2s infinite;
+      margin-top: 30px;
+    }
+
+    .btn-wish:hover {
+      background: #ff0080;
+    }
+
+    @keyframes pulseButton {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5em;
+      }
+
+      .wish {
+        font-size: 1.1em;
+      }
+
+      .emojis {
+        font-size: 2em;
+      }
+
+      .btn-wish {
+        font-size: 1.3em;
+        padding: 12px 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .wish {
+        font-size: 1em;
+        padding: 0 10px;
+      }
+
+      .btn-wish {
+        font-size: 1.1em;
+        padding: 10px 20px;
+      }
+
+      .balloon {
+        width: 40px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Balloons -->
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+
+  <div class="overlay">
+    <h1>🥳 Happy Birthday Aish 🎉</h1>
+
+    <div class="wish" id="wishText">
+      You’re officially an adult now, but for me, you’ll always be that fun, silly, and super special person who lights up every moment. Thank you for being the one who makes life feel better just by being in it. Your smile changes my entire mood, and your presence brings peace like nothing else ever could.<br><br>
+      You’re truly my favorite person, my happy place, my chaos and calm all in one.<br><br>
+      Yeah, we fight a lot — like a lot — but no matter what, I’m never letting you go. You’ve made everyone else fade in comparison, and I feel insanely lucky to have you. You’re not just my best friend — you’re a part of me. I love you more than I can explain, and I hope your day is as amazing as you are. Always stay the beautiful soul you are. ❤️
+    </div>
+
+    <div class="emojis">
+      🥳  🎈 🎁 💝 🌸 💫
+    </div>
+
+    <button class="btn-wish" onclick="changeBackground()">Click to Unlock a Surprise 💖</button>
+
+  </div>
+
+  <!-- Confetti Script -->
+  <script>
+    for (let i = 0; i < 50; i++) {
+      const confetti = document.createElement('div');
+      confetti.classList.add('confetti');
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      document.body.appendChild(confetti);
+    }
+
+    function changeBackground() {
+      document.body.style.backgroundImage = "url('https://cdn.dribbble.com/userupload/23391440/file/original-a414a39d0c51dbfec5ee12c37135505a.gif')";
+      
+      // Show the birthday message with a fade-in effect
+      document.getElementById("wishText").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("wishText").style.opacity = 1;
+      }, 100);
+    }
+  </script>
+
+</body>
+</html>
